@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 export const About = () => {
+    const navigate = useNavigate();
     return (
         <div className="bg-white">
             {/* Hero Section */}
@@ -107,7 +110,7 @@ export const About = () => {
                         Be part of something bigger. Connect, learn, and grow with us.
                     </p>
                     <button
-                        onClick={() => window.location.href = '/events'}
+                        onClick={() => {navigate('/events')}}
                         className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 font-medium"
                     >
                         Explore Events
